@@ -16,7 +16,6 @@ const GifExpertApp = () => {
 
             <hr></hr>
 
-            <ol>
                 {
                     categories.map( category =>  (
                         <GifGrid 
@@ -25,7 +24,6 @@ const GifExpertApp = () => {
                         />
                     ))
                 }
-            </ol>
         </Fragment>
     )
 }
