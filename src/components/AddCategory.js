@@ -6,23 +6,22 @@ export const AddCategory = ({ setCategories }) => {
     const [inputValue, setInputValue] = useState(''); // String
 
     const handleInputChange = ( e ) => {
-        setInputValue( e.target.value )
+        setInputValue( e.target.value );
     }
 
     const handleSubmit = ( event ) => {
         event.preventDefault();
 
-        // console.log('Submit Hecho');
-        // setCategories
-
         if( inputValue.trim().length >= 2 ){
             setCategories( categories => [inputValue, ...categories] );
             setInputValue('');
+            console.log('Llegamos hasta aca!');
         }
     }
 
     return (
-        <form onSubmit={ handleSubmit }>        
+        <form onSubmit={ handleSubmit }>
+            <p>{ inputValue }</p>
             <input 
                 type="text"
                 value={ inputValue }
